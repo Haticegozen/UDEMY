@@ -1,0 +1,756 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+
+}
+.main-div{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 60px; /*bak*/
+}
+
+#logo1{
+    width: 130px;
+    height: 52px;
+    margin-top: 20px;
+    margin-left: 35px;
+    display: flex;
+    
+}
+/*
+.dropdown-container {
+    position: relative;
+}
+.dropdown-container button{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    margin-top: 80px;
+    font-size: 20px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+
+}
+
+.dropdown-container button:hover{
+    color: rgb(95, 54, 242);
+}
+
+.dropdown-container nav{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    opacity: 0;
+    visibility: hidden;
+    transition: 200ms all;
+}
+
+.dropdown-container nav ul li a{
+    display: block;
+    padding: 10px 15px;
+    font-size: 14px;
+    text-decoration: none;
+}
+.dropdown-container nav ul li a:hover{
+    color: (95, 54, 242);  
+}
+
+.dropdown-container button:focus + nav{
+    opacity: 1;
+    visibility: visible;
+
+}*/
+
+.search-main{
+    width: 550px;
+    height: 70px ;
+    border: solid 1px;
+    border-radius: 70px;
+    margin-top: 15px;
+    margin-left: 20px;
+    background-color:white;
+    display: flex;
+    align-items: center;
+}
+
+.text-search{
+    float: right;
+    width: 550px; 
+    margin-left: 10px;
+    height: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    font-size: 16px;
+}
+
+input placeholder{
+    color: #575656;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.btn-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    margin-left: 10px;
+    color: rgb(138, 136, 136);
+    font-size: 25px;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+}
+
+.yazi li a{
+    margin-top: 90px;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+nav ul li{
+    display: inline;
+    list-style-type: none;
+    font-size: 22px; 
+}
+
+nav ul li a{
+    
+    text-decoration: none;
+    color: black;
+   
+}
+
+nav ul li a:hover{
+   color: rgb(135, 52, 230);
+   
+}
+.btn-shopping{
+    margin-top: 20px;
+    margin-right: 30px;
+    font-size: 30px;
+}
+
+.kategori{
+    margin-left: 10px;
+    margin-top: 20px;
+
+}
+.btn-shopping:hover{
+    color: rgb(135, 52, 230);
+}
+
+.button{
+    margin-top: 18px;
+}
+
+#oturum-ac{
+    height: 60px;
+    width: 140px;
+    background-color: white;
+    border: 1px solid;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+#oturum-ac:hover{
+    background-color: rgb(234, 230, 230);
+
+}
+
+#kaydol{
+    height: 60px;
+    width: 120px;
+    background-color: #393838;
+    border: 1px solid #393838;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    
+}
+
+#kaydol:hover{
+    background-color: #575656;
+}
+
+#global{
+    height: 60px;
+    width: 61px;
+    background-color:white;
+    border: 1px solid #393838;
+    font-size: 20px;
+    color: #393838;
+   
+}
+#global:hover{
+    background-color: rgb(234, 230, 230);
+}
+
+button{
+   margin: 0px 6px;
+}
+
+/*Carousel başlıyor*/
+
+.mainPage{
+    background-color: white;
+}
+
+.carousel{
+    height: 500px;
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 50px auto;
+    border: none;
+}
+.carousel-resim{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.arrow{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+}
+
+.arrow-prev{
+    left: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next{
+    right: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^= "resim"]{
+    display: none;
+}
+
+.resim-1{
+    z-index: 2;
+    opacity: 1;
+   background: url("img/slider1.jpg");
+    background-size: cover;
+}
+
+.resim-2{
+    background: url("img/slider2.jpg");
+    background-size: cover;
+}
+
+.referans{
+    height: 300px;
+    width: 100%;
+    padding: 20px;
+    background-color: #faf9f9;
+    position: relative;
+    align-items: center;
+    
+}
+
+h1#referans{
+   
+    color: rgb(141, 140, 140);
+    font-style: normal;
+    text-align: center;
+    
+}
+
+#img{
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu{
+    position: relative;
+    align-items: center;
+    height: 200px;
+    width: 70%;
+    display: block;
+    margin: 30px;
+}
+
+#baslik{
+    color:black;
+    font-size: 50px;
+   
+}
+#baslik2{
+    font-size: 30px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: rgb(128, 128, 128);
+    font-size: 28px;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.menu a:hover{
+    color: black;
+}
+
+#slider{
+    width: 96%;
+    height: 1500px;
+    display: block;
+    position: relative;
+    left: 40px;
+    border: 1px solid #ccc;
+    padding: 14px 46px; 
+}
+
+.slidertext{
+    color: black;
+    font-size: 40px;
+}
+
+p{
+    font-size: 26px;
+    line-height: 38px;
+}
+
+.python{
+    height: 60px;
+    width: 300px;
+    margin-bottom: 40px;
+    border: 1px solid;
+    background-color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    display: block;
+}
+
+.python:hover{
+    background-color: #e9e7e7 ;
+}
+.pythondersleri{
+    display: flex;
+    height: 600px;
+}
+
+.pythondersleri img{
+    margin: 0;
+    width: 300px;
+    height: auto;
+}
+
+.ders-1{
+    padding: 0;
+    margin: 0 20px;
+    width: 300px;
+    height: 520px;
+    border: none
+}
+
+.ders-1 img{
+    margin: 0;
+    padding: 0; /*div ve div içerisindeki img için sıfırlama yapmama rağmen resim tam oturmadı??*/ 
+    width: 100%;
+   
+}
+.ders-1 h1{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.egitmen{
+    font-size: 20px;
+}
+
+.puan{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.puan i{
+    font-size: 20px;
+    color: gold;
+}
+
+.puan span{
+    /*font-size: 10;  span değerine farklı font-size atayamadım????*/
+    font-weight: normal;
+}
+
+.fiyat{
+    font-weight: bolder;
+}
+
+
+.coksatan{
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(235, 212, 11);
+    border: none;
+    padding: 7px;
+}
+
+#satir-2{
+    width: 100%;
+    display: flex;
+}
+
+#pop{
+    font-size: 40px;
+    font-weight: bolder;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.pop img{
+    width: 400px;
+    height: auto;  
+}
+
+.pop img:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+     transition: 0.5s ease;
+}
+
+
+.pop-1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.pop-2{
+
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#konular{
+    width: 100%;
+    height: 700px;
+    background-color: #f3f3f3;
+    padding-top: 40px;
+}
+
+.onecikan{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.onecikan a{
+    font-size: 26px;
+    font-weight: bolder;
+    color: rgb(108, 14, 222);
+}
+
+
+.kesfet{
+    height: 60px;
+    width: 300px;
+    margin-bottom: 40px;
+    margin-left: 100px;
+    border: 1px solid;
+    background-color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    display: block;
+}
+.basslik{
+   font-size: 40px;
+   font-weight: bolder;
+   margin-left: 110px;
+   
+}
+
+footer{
+    width: 100%;
+    height: 480px;
+    background-color: black;
+    color: white;
+
+}
+
+footer .footermain{
+    width: 100%;
+    height: 360px;
+}
+
+footer a{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
+    display: block;
+    margin: 18px 100px;
+    text-decoration: none;
+    
+}
+
+footer .left{
+    width: 70%;
+    float:left;
+    margin: 30px 20px;
+    display: flex;
+    align-items: center;
+}
+
+footer .right{
+    width: 20%;
+    float: right;
+    margin-top: 50px;  
+    display: flex;
+    align-items: center;
+}
+
+#footerglobal{
+    height: 60px;
+    width: 220px;
+    background-color:black;
+    border: 1px solid white;
+    font-size: 20px;
+    color: #393838;
+    margin-left: 90px;
+}
+#footerglobal i{
+    font-size: 30px;
+    color: white;
+    margin: 6px 6px;
+}
+#footerglobal span{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-right: 40px;
+    margin-bottom: 6px;
+}
+
+footer .footerbottom{
+    width: 100%;
+    height: 60px;
+    display: flex;
+}
+
+.footerbottom-left{
+    float: left;
+    width: 70%;
+}
+.footerbottom .logo2{
+    width: 120px;
+    height: 52px;
+    margin-top: 20px;
+    margin-left: 120px;
+    float: left;
+}
+
+.footerbottom-right{
+    float: right;
+    width: 20%;
+    
+    display: flex;
+    align-items: center;
+}
+.footerbottom #inc{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    float: right;
+    margin-top: 40px;
+    margin-left: 120px;
+    border: none;
+}
+
+#katil{
+    width: 100%;
+    height: 2000px;
+    background-color: white;
+    padding: 80px;
+}
+.katil-1{
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+.katil1-left{
+    width: 50%;
+}
+.katil1-left img{
+    align-items: center;
+    width: 600px;
+    height: auto;
+    margin-left: 140px;
+}
+
+.katil1-right{
+    width: 50%;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+.katil1-right h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.katil1-right p{
+    font-size: 30px;
+    float: left;
+}
+
+.katil1-right button{
+    width: 400px;
+    height: 80px;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+/*katıl2
+
+.katil-2{
+    margin-top: 50px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+.katil2-left{
+    width: 50%;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+.katil2-left h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.katil2-left h1 img{
+    width: 130px;
+    height: 52px;
+    margin-top: 20px;
+    margin-left: 35px;
+    display: flex;
+}
+.katil2-left p{
+    font-size: 30px;
+    float: left;
+}
+
+.katil2-left button{
+    width: 400px;
+    height: 80px;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+
+
+.katil2-left img{
+    align-items: center;
+    width: 600px;
+    height: auto;
+    margin-left: 140px;
+}*/
+
+/* KAYDOL.HTML* başlıyor*/
+.kaydolnav{
+    margin-bottom: 10px;
+}
+
+#kayitsayfasi{
+    
+    height: 200px;
+    position: relative;
+}
+.basslik{
+    margin-top: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    align-items: center;
+}
+
+#container{
+    width: 100%;
+    height: 500px;
+    margin-top: 0px;
+    
+    
+}
+
+.kayit input{
+    width: 480px;
+    height: 80px;
+    border: 1px solid black;
+    font-size: 20px;
+    font-weight: bold;
+}
+.kayit2 #check{
+    width: 20px;
+    height: 20px;
+}
+
+.kayit2 span{
+    font-size: 21px;
+}
+
+.kaydol{
+    margin-left: 0;
+    width: 480px;
+    height: 80px;
+    background-color: rgb(157, 93, 222);
+    color: white;
+    border: none;
+}
+.kaydol h1{
+    font-size: 22px;
+    font-weight: bolder;
+    margin-left: 0;
+    text-align: center;
+}
+
+
